@@ -16,11 +16,22 @@ The function should:
 */
 
 
-function createMenuItem(/*Your code here*/){
-  /*Your code here*/
+function createMenuItem(x, y, z)
+{
+  const tempObj =
+  {
+    name: x,
+    price: y,
+    category: z,
+  };
+  return tempObj;
+  
 }
 
+const taco = new createMenuItem('tacos', 8, 'Lunch')
 
+
+console.log( taco );
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -32,6 +43,13 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+const pizza = new createMenuItem('pizza', 5, 'lunch');
+const soup = new createMenuItem( 'soup', 4, 'brunch');
+const sandwitch = new createMenuItem( 'sandwitch', 3, 'snack');
+
+console.log( pizza );
+console.log( soup );
+console.log( sandwitch );
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -51,8 +69,25 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
-}
+  discount(x)
+  {
+    if ( x === "teacher" || x === "student" )
+    {
+      return this.price - (this.price * 0.25) ;
+    }
+    else
+    {
+      return this.price - (this.price * 0.10);
+    }
+  }
+};
+
+const teachObj = Object.create( burger );
+const stuObj = Object.create( burger );
+const pubObj = Object.create( burger );
+
+
+
 
 
 
