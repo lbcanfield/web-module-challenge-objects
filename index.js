@@ -144,8 +144,29 @@ Use the addReview function below to do the following:
 */
 
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+
+function addReview(tempArray, x, y, z)
+{
+  const tempObj =
+  {
+    name: x,
+    rating: y,
+    feedback: z,
+  };
+
+  tempArray.push( tempObj);
+  return tempArray;
+  
+}
+
+const newRevArray = reviews;
+const naArray = ['Billy','Jimmy','Sue','Sarah'];
+const raArray = [2,4,6,8];
+const reArray = ['Lame food!','Ok Service','Great Service','Waste of Time'];
+
+for ( let i = 0; i < naArray; i += 1)
+{
+  newRevArray = addReview( newRevArray, naArray[i], raArray[i], reArray[i]);
 }
 
 
