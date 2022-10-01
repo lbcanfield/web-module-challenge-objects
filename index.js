@@ -182,11 +182,13 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(tArray, tIndex) 
+{
+  return tArray[tIndex].name + " gave the restaurant a " + tArray[tIndex].rating + " star review, and their feedback was: " + tArray[tIndex].feedback ;
 }
 
-  
+console.log(getReviewByIndex(reviews, 0));
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Write a function to get information about the most recent (last) review called `getLastReview`
